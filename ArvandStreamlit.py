@@ -1,11 +1,6 @@
 import pickle
 import streamlit as st
 from PIL import Image
-if 'sklearn' not in st.session_state:
-    st.experimental_rerun()
-    st.session_state['sklearn'] = True
-    pip install sklearn
-import sklearn
 def predict_note_authentication(fam_size, busexp, number, time, timeofcredit, income, gen_code, fam_code, edu_code, filial_code, cus_code, bus_code, nat_code, age, zalog_code):
     pickle_in = open("Arvand.pkl","rb")
     randf_model = pickle.load(pickle_in)
